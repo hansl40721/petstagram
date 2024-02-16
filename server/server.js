@@ -18,9 +18,9 @@ const startApolloServer = async () => {
     app.use('/graphql', expressMiddleware(server))
 
     if(process.env.NODE_ENV === 'production') {
-        app.use(express.static(path.join(__dirname, '../some-project/dist')))
+        app.use(express.static(path.join(__dirname, '../client/dist')))
         app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../some-project/dist/index.html'))
+            res.sendFile(path.join(__dirname, '../client/dist/index.html'))
         })
     }
 
