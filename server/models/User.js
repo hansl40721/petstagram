@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Post = require('./Post');
 
-const userSchema =  new Schema({
+const userSchema =  new mongoose.Schema({
   username: {
     type: String,
     required: true,

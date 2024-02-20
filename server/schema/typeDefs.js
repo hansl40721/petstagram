@@ -14,6 +14,11 @@ type Post {
   image: String
 }
 
+type Auth {
+  token: ID
+  user: User
+}
+
 type Query {
   users: [User]
   posts(_id: ID!): [Post]
