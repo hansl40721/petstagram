@@ -19,6 +19,11 @@ type Query {
   posts(_id: ID!): [Post]
 }
 
+type Auth {
+  token: ID
+  user: User
+}
+
 type Mutation {
   addUser(username: String!, password: String!): Auth
 }
