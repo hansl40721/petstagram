@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const Post = require('./Post');
+
 const userSchema =  new Schema({
   username: {
     type: String,
@@ -11,6 +13,12 @@ const userSchema =  new Schema({
     required: true,
     minlength: 5,
   },
+  email: {
+    type: String, 
+    required: true,
+    trim: true
+  },
+  posts: [Post.schema],
 });
 
 const User = mongoose.model('User', userSchema);
