@@ -1,6 +1,9 @@
 import * as decode from 'jwt-decode';
 
 class AuthService {
+  getProfile() {
+    return decode(this.getToken());
+  }
 
   loggedIn(){
     const token = this.getToken();
@@ -16,6 +19,10 @@ class AuthService {
     } catch (err) {
       return false;
     }
+  }
+
+  getToken() {
+    return localStorage.getItem('id_token');
   }
 
   login(idToken) {

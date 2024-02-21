@@ -2,17 +2,18 @@ import { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
-import * as Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
 function Login(props) {
-  const [formState, setFormState] = useState({ username: '', password: ''});
+  const [formState, setFormState] = useState({ email: '', password: ''});
   const [login, {error}] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(JSON.stringify(formState))
       const mutationResponse = await login({
-        variables: { username: formState.username, password: formState.password },
+        variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
@@ -36,27 +37,28 @@ function Login(props) {
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email">Email:</label>
           <input 
-            placeholder="DisapprovingChinchilla42"
-            name="username"
-            type="username"
-            id="username"
+            placeholder="Chinchillin@gmail.com"
+            name="email"
+            type="email"
+            id="email"
             onChange={handleChange}
             />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input 
             placeholder="********"
             name="password"
             type="password"
+            id="password"
             onChange={handleChange}
           />
         </div>
         {error ? (
           <div>
-            <p className="error-text">Sorry, your username and password do not match.</p>
+            <p className="error-text">Sorry, your email and password do not match.</p>
           </div>
         ) : null}
         <div className="flex-row flex-end">
