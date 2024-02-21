@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
+
 import { ADD_USER } from "../utils/mutations";
 import * as Auth from '../utils/auth';
 import "../styles/Pages.css"
@@ -34,15 +34,17 @@ function Signup(props) {
   };
 }
 
+
 function Login(props) {
-  const [formState, setFormState] = useState({ username: '', password: ''});
+  const [formState, setFormState] = useState({ email: '', password: ''});
   const [login, {error}] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(JSON.stringify(formState))
       const mutationResponse = await login({
-        variables: { username: formState.username, password: formState.password },
+        variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
@@ -64,6 +66,7 @@ function Login(props) {
       <div className="signUp">
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
+
       <div className="flex-row space-between my-2">
           <label htmlFor="username">Username:</label>
           <input
@@ -71,6 +74,7 @@ function Login(props) {
             name="username"
             type="username"
             id="username"
+
             onChange={handleChange}
           />
         </div>
@@ -114,17 +118,20 @@ function Login(props) {
           />
           </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input 
             placeholder="********"
             name="password"
             type="password"
+            id="password"
             onChange={handleChange}
           />
         </div>
         {error ? (
           <div>
+
             <p className="error-text">Incorrect Credentials</p>
+
           </div>
         ) : null}
         <div className="flex-row flex-end">

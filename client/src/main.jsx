@@ -18,12 +18,14 @@ const router = createBrowserRouter([
         index: true,
         element: <Login />
       }, {
+
         path: '/profile',
         element: <Prof />
       }, {
         path: '/post',
         element: <Post />
       },
+
     ]
   }
 ])
@@ -31,8 +33,3 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 )
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )

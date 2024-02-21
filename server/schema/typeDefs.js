@@ -2,16 +2,21 @@ const typeDefs = `
 type User {
   _id: ID
   username: String!
-  password: String!
   email: String!
+  password: String!
   posts: [Post]
 }
 
 type Post {
   _id: ID
-  title: String!
   description: String!
   image: String
+}
+
+type Query {
+  users: [User]
+  user: User
+  posts(_id: ID!): [Post]
 }
 
 type Auth {
@@ -19,13 +24,9 @@ type Auth {
   user: User
 }
 
-type Query {
-  users: [User]
-  posts(_id: ID!): [Post]
-}
-
 type Mutation {
-  addUser(username: String!, password: String!): Auth
+  addUser(username: String!, email: String!, password: String!): Auth
+  login(email: String!, password: String!): Auth
 }
 `
 
