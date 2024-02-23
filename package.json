@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\""
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "seed": "node server/config/seeds.js"
   },
   "keywords": [],
   "author": "",
