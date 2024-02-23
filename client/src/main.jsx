@@ -7,7 +7,7 @@ import Homepage from './pages/Homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login';
 import Post from './pages/Post';
-import Prof from "./pages/Prof"
+import Prof from "./pages/Prof";
 import './index.css';
 
 const router = createBrowserRouter([

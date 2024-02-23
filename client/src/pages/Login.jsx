@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-
-import { ADD_USER } from "../utils/mutations";
-import * as Auth from '../utils/auth';
+import { LOGIN } from "../utils/mutations";
+import Auth from '../utils/auth';
 import "../styles/Pages.css"
 
 import Nav from "../components/Nav";
-
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: ''});
@@ -43,6 +40,7 @@ function Login(props) {
         <h2>The place to share your pet photos with other pet lovers</h2>
       </div>
 
+      <Link to="/signup">← Go to Signup</Link>
       <div className="logForm">
 
       <div className="logIn">

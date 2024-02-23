@@ -34,58 +34,58 @@ function Signup(props) {
     });
   };
 
-return (
-<div className="logUpContain container my-1">
-<div className="splashText">
-  <h1>Welcome to Petstagram!</h1>
-  <h2>The place to share your pet photos with other pet lovers</h2>
-</div>
+  return (
+    <div className="logUpContain container my-1">
+      <div className="splashText">
+        <h1>Welcome to Petstagram!</h1>
+        <h2>The place to share your pet photos with other pet lovers</h2>
+      </div>
 
-<div className="logForm">
+      <Link to="/">← Go to Login</Link>
+      <div className="logForm">
 
-<div className="signUp">
-<h2>Signup</h2>
-<form onSubmit={handleFormSubmit}>
-
-<div className="flex-row space-between my-2">
-    <label htmlFor="username">Username:</label>
-    <input
-      placeholder="Username"
-      name="username"
-      type="username"
-      id="username"
-
-      onChange={handleChange}
-    />
-  </div>
-  <div className="flex-row space-between my-2">
-    <label htmlFor="email">Email:</label>
-    <input
-      placeholder="Email"
-      name="email"
-      type="email"
-      id="email"
-      onChange={handleChange}
-    />
+      <div className="signUp">
+      <h2>Signup</h2>
+      <form onSubmit={handleFormSubmit}>
+        
+        <div className="flex-row space-between my-2">
+          <label htmlFor="username">Username:</label>
+          <input
+            placeholder="DisapprovingChinchilla42"
+            name="username"
+            type="text"
+            id="username"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
+          <input
+            placeholder="Chinchillin@gmail.com"
+            name="email"
+            type="text"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="password">Password:</label>
+          <input
+            placeholder="********"
+            name="password"
+            type="password"
+            id="password"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
-    <div className="flex-row space-between my-2">
-    <label htmlFor="pwd">Password:</label>
-    <input
-      placeholder="******"
-      name="password"
-      type="password"
-      id="pwd"
-      onChange={handleChange}
-    />
-  </div>
-  <div className="flex-row flex-end">
-    <button type="submit">Submit</button>
-  </div>
-</form>
-</div>
-</div>
-</div>
-);
+    </div>
+    </div>
+  );
 }
 
 export default Signup;
