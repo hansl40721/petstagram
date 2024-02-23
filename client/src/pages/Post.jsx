@@ -1,9 +1,7 @@
-// import React from 'react';
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
 import { ADD_POST } from '../utils/mutations';
-import * as Auth from '../utils/auth';
+import Auth from '../utils/auth';
 import "../styles/Pages.css"
 import Nav from "../components/Nav";
 

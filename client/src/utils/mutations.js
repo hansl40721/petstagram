@@ -6,11 +6,11 @@ export const LOGIN = gql`
       token
       user {
         _id
+        username
       }
     }
   }
 `;
-
 
 export const ADD_USER = gql`
   mutation addUser(
@@ -26,6 +26,7 @@ export const ADD_USER = gql`
       token
       user {
         _id
+        username
       }
     }
   }
@@ -40,10 +41,31 @@ export const ADD_POST = gql`
     description: $description
     image: $image
   ) {
-    token
-    user {
-      _id
-    }
+    _id
+    description
+    image
+    # createdAt
+    # comments {
+    #   _id
+    #   commentText
+    # }
   }
 }
+`;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($postId: ID!, $commentText: String!) {
+    addComment(postId: $postId, commentText: $commentText) {
+      _id
+      description
+      image
+      # postAuthor
+      # createdAt
+      # comments {
+      #   _id
+      #   commentText
+      #   createdAt
+      # }
+    }
+  }
 `;
