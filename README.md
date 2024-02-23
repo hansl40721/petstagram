@@ -1,1 +1,3 @@
-## Pestagram
+## Petstagram
+
+Images are cool
