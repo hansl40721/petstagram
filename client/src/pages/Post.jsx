@@ -4,6 +4,7 @@ import { ADD_POST } from '../utils/mutations';
 import Auth from '../utils/auth';
 import "../styles/Pages.css"
 import Nav from "../components/Nav";
+import CloudinaryUploadWidget from '../components/CloudinaryUploadWidget';
 
 function addPost(props) {
     const [ formState, setFormState ] = useState({ description: '', image: '' });
@@ -30,6 +31,7 @@ function addPost(props) {
     };
 
     return (
+      <>
       <div className="postContainer container m-1">
         <h2>Upload A Post</h2>
         <form onSubmit={handleFormSubmit}>
@@ -45,6 +47,11 @@ function addPost(props) {
           </div>
         </form>
       </div>
+      <div>
+        <h2>Cloudinary Widget</h2>
+        <CloudinaryUploadWidget />
+      </div>
+      </>
     );
 
     }
