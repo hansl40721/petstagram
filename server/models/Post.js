@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true
-    },
     title: {
         type: String,
         required: true
@@ -17,6 +13,14 @@ const postSchema = new mongoose.Schema({
         type: String, 
         required: false
     }
+});
+
+postSchema.virtual('id').get(function() {
+    return this._id.toHexString();
+});
+
+postSchema.set('toJSON', {
+    virtuals: true
 });
 
 const Post = mongoose.model('Post', postSchema);
