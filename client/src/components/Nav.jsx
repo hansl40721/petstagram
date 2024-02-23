@@ -2,17 +2,23 @@ import React from "react"
 import { Link } from 'react-router-dom';
 import "../styles/Component.css";
 
+const styles = {
+    link: {
+        textDecoration: "inherit",
+    }
+}
+
 const Nav = () => {
     return (  
     <div className="nav">
         <Link to ='/'>
-        <div className="navTitle">Petstagram</div>
+        <div className="navTitle" style={styles.link}>Petstagram</div>
         </Link>
         <div className="navLogo">
-            <img src="https://external-preview.redd.it/lMYOFfQzicq49A6sq6mlOjHiRX0EkyoeyTe96wCVfrw.jpg?auto=webp&s=bae5b19f45be662c9005b79f90656bafd8540d34"/>
+            <i class="fa-solid fa-paw"></i> 
         </div>
         <Link to= '/profile'>
-            Username
+        <div className="navUser">Username</div>
         </Link>
     </div>
 
