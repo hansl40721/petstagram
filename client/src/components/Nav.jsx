@@ -15,7 +15,7 @@ const Nav = () => {
         <div className="navTitle" style={styles.link}>Petstagram</div>
         </Link>
         <div className="navLogo">
-            <i class="fa-solid fa-paw"></i> 
+            <i className="fa-solid fa-paw"></i> 
         </div>
         <Link to= '/profile'>
         <div className="navUser">Username</div>

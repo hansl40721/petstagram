@@ -17,8 +17,6 @@ function Signup(props) {
         password: formState.password,
       },
     });
-    console.dir(`Mutation response: ${JSON.stringify(mutationResponse)}`)
-    console.log(`Form ${JSON.stringify(formState)}`)
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   } catch (err) {
@@ -35,11 +33,19 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
+    <div className="logUpContain container my-1">
+      <div className="splashText">
+        <h1>Welcome to Petstagram!</h1>
+        <h2>The place to share your pet photos with other pet lovers</h2>
+      </div>
 
+      <Link to="/">← Go to Login</Link>
+      <div className="logForm">
+
+      <div className="signUp">
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
+        
         <div className="flex-row space-between my-2">
           <label htmlFor="username">Username:</label>
           <input
@@ -74,6 +80,8 @@ function Signup(props) {
           <button type="submit">Submit</button>
         </div>
       </form>
+    </div>
+    </div>
     </div>
   );
 }
