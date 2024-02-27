@@ -9,7 +9,7 @@ const Prof = () => {
 
     const { loading, data } = useQuery(QUERY_USER);
   
-    const user = data?.me || data?.user || {};
+    const user = data?.user || {};
     if (
         Auth.loggedIn() &&
         Auth.getProfile().authenticatedPerson.username === userParam
@@ -40,7 +40,7 @@ const Prof = () => {
 
     // post.map function
     
-    };
+};
 
 
 
