@@ -16,13 +16,15 @@ const Prof = () => {
     ) {
       return (
         <>
+        <ul>
           {user.posts.map((post) => (
-            <div key={post._id} className="my-2">
+            <li key={post._id} className="my-2">
               <h3 className="profile">{post.username}</h3>
               <img alt={post.description} src={post.image} />
               <p>{post.description}</p>
-            </div>
+            </li>
           ))}
+          </ul>
         </>
       );
     }
@@ -37,10 +39,7 @@ const Prof = () => {
             <Navigate to='/login' />
         )
     }
-
-    // post.map function
-    
-};
+    };
 
 
 

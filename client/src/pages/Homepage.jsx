@@ -20,6 +20,7 @@ const Homepage = () => {
             <img src={pic1}/>
             <img src={pic2}/>
         </div>
+
         <div className="footer">
             <p>Copyright Chinchilla Group 2024</p>
         </div>
