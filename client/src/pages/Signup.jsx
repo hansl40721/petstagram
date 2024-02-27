@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 
 import { ADD_USER } from "../utils/mutations";
-import * as Auth from '../utils/auth';
+import Auth from '../utils/auth';
 import "../styles/Pages.css"
 
 import Nav from "../components/Nav";
@@ -41,7 +41,7 @@ function Signup(props) {
         <h2>The place to share your pet photos with other pet lovers</h2>
       </div>
 
-      <Link to="/">← Go to Login</Link>
+      <Link to="/login">← Go to Login</Link>
       <div className="logForm">
 
       <div className="signUp">
