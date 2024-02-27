@@ -6,17 +6,22 @@ import { LOGIN } from '../utils/mutations';
 import { ADD_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
 import "../styles/Pages.css"
-
 import Nav from "../components/Nav";
 
 const Homepage = () => {
     return (
-    <>
-    <img src="https://res.cloudinary.com/dcjz6vl08/image/upload/c_fill,g_face,h_300,w_300/r_max/f_auto/v1708660066/myyshfx2ro3jtks99l4.jpg" />
-    <div className="footer">
-        <p>Copyright Chinchilla Group 2024</p>
+    <div className="homepageContain">
+        <div className="splashText">
+            <h1>Welcome to Petstagram!</h1>
+            <h2>The place to share your pet photos with other pet lovers</h2>
+        </div>
+        <div className="splashImage">
+            <img src="../assets/image-from-rawpixel-id-6657881-jpeg(1).png"/>
+        </div>
+        <div className="footer">
+            <p>Copyright Chinchilla Group 2024</p>
+        </div>
     </div>
-    </>
     );
 }
 

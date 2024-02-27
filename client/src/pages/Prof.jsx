@@ -7,9 +7,7 @@ import Auth from '../utils/auth'
 const Prof = () => {
     const { username: userParam } = useParams();
 
-    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-        variables: { username: userParam },
-    });
+    const { loading, data } = useQuery(QUERY_USER);
   
     const user = data?.me || data?.user || {};
     if (
@@ -31,9 +29,18 @@ const Prof = () => {
     }
 
     // post.map function
-
-    <div className='profile'>This is our profile</div>
-} 
+    return (
+        <>
+          {user.posts.map((post) => (
+            <div key={post._id} className="my-2">
+              <h3 className="profile">{post.username}</h3>
+              <img alt={post.description} src={post.image} />
+              <p>{post.description}</p>
+            </div>
+          ))}
+        </>
+      );
+    };
 
 
 
