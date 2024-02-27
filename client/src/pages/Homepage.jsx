@@ -15,7 +15,7 @@ const Homepage = () => {
             <h2>The place to share your pet photos with other pet lovers</h2>
         </div>
         <div className="splashImage">
-            <img src="../assets/image-from-rawpixel-id-6657881-jpeg(1).png"/>
+            <img src="../assets/image-from-rawpixel-id-6657881-jpeg(1)"/>
         </div>
         <div className="footer">
             <p>Copyright Chinchilla Group 2024</p>

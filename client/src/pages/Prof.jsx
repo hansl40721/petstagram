@@ -14,22 +14,7 @@ const Prof = () => {
         Auth.loggedIn() &&
         Auth.getProfile().authenticatedPerson.username === userParam
     ) {
-        return <Navigate to='/me' />;
-    }
-
-    if (loading) {
-        return <div>Loading..</div>;
-    }
-
-    if (!user?.username) {
-        return (
-            alert("You need to be logged in to see this."),
-            <Navigate to='/login' />
-        )
-    }
-
-    // post.map function
-    return (
+      return (
         <>
           {user.posts.map((post) => (
             <div key={post._id} className="my-2">
@@ -40,6 +25,21 @@ const Prof = () => {
           ))}
         </>
       );
+    }
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (!user?.username) {
+        return (
+            alert("You need to be logged in to see this."),
+            <Navigate to='/login' />
+        )
+    }
+
+    // post.map function
+    
     };
 
 
