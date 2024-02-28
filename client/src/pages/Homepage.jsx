@@ -21,7 +21,11 @@ const Homepage = () => {
                         Login
                 </Link>
                 </div>
-                ) : null
+                ) : (<div className='loginLink'>
+                <Link to='/profile'>
+                        Go To Profile
+                </Link>
+                </div>)
                 }
             </div>
 
