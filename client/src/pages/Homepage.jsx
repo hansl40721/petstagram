@@ -16,9 +16,9 @@ const Homepage = () => {
             <div className="splashText">
                 <h1>Welcome to Petstagram!</h1>
                 <h2>The place to share your pet photos with other pet lovers</h2>
-                <div className='loginlink'>
+                <div className='loginLink'>
                 <Link to='/login'>
-                    Login
+                        Login
                 </Link>
                 </div>
             </div>
