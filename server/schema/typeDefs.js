@@ -10,7 +10,7 @@ type User {
 type Post {
   _id: ID
   description: String!
-  image: String
+  image: String!
   postAuthor: String
   createdAt: String
   comments: [Comment]
@@ -39,7 +39,7 @@ type Auth {
 type Mutation {
   addUser(username: String!, email: String!, password: String!): Auth
   login(email: String!, password: String!): Auth
-  addPost(postText: String!): Post
+  addPost(description: String!, image: String!): Post
   addComment(postId: ID!, commentText: String!): Post
   removePost(postId: ID!): Post
   removeComment(postId: ID!, commentId: ID!): Post

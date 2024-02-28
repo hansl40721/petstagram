@@ -1,20 +1,20 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dayjs = require('dayjs');
 
-const postSchema = new mongoose.Schema({
+const postSchema = new Schema({
     description: {
         type: String,
         trim: true,
         required: true,
     },
     image: {    
-        data: Buffer, 
-        contentType: String,
+        type: String, 
+        required: true,
     },
     postAuthor: {
         type: String,
-        required: true,
         trim: true,
+        required: true,
     },
     createdAt: {
         type: Date,
@@ -44,16 +44,23 @@ const postSchema = new mongoose.Schema({
           },
         },
     ],
-});
+  },
+  {
+    toJSON: {
+      getters: true
+    },
+    id: false
+  }
+);
 
-postSchema.virtual('id').get(function() {
-    return this._id.toHexString();
-});
+// postSchema.virtual('id').get(function() {
+//     return this._id.toHexString();
+// });
 
-postSchema.set('toJSON', {
-    virtuals: true
-});
+// postSchema.set('toJSON', {
+//     virtuals: true
+// });
 
-const Post = mongoose.model('Post', postSchema);
+const Post = model('Post', postSchema);
 
 module.exports = Post;
