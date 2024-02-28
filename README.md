@@ -10,13 +10,23 @@ Petstagram is the ultimate social platform for pet lovers! Our web application m
  - [Contributing](#contributing)
 
 ## Technologies
-Cloudinary API
-React JS
-GraphQL
+Cloudinary API <br>
+React JS <br>
+GraphQL <br>
 
 ## Code-Source
-[GitHub](https://github.com/hansl40721/petstagram)
+[GitHub](https://github.com/hansl40721/petstagram) <br>
+[Live Application](https://petstagram-pzn9.onrender.com)
 
-## Contributing 
+## Contributing
+[Cloudinary](https://cloudinary.com/documentation)
+[React](https://react.dev/learn)
+
+## Authors
+[Lucas](https://github.com/hansl40721) <br>
+[Elayne](https://github.com/ellacheu)<br>
+[Alexis](https://github.com/alexismenendez)<br>
+[Jacob](https://github.com/IvanDirigible)<br>
+
 
 Images are cool

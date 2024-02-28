@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://petstagram-pzn9.onrender.com/wedidit_db');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/wedidit_db');
 
 const db = mongoose.connection;
 
