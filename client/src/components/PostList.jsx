@@ -1,68 +1,22 @@
-// import React from "react"
-
-// const PostCard = ({ post, showUsername = true }) => {
-//     if (!post.length) {
-//         return <h3>No posts yet!</h3>
-//     }
-
-// return (
-//     <div key={post.id} className='card'>\
-//         {post.image && (
-//             <img src={post.image} alt={post.description}/>
-//         )}
-//         <p>{post.description}</p>
-//     </div>
-// )
-// }
-
-// export default PostCard
-
 import { Link } from 'react-router-dom';
+import PostCard from "./PostCard"
+import "../styles/Component.css"
 
 const PostList = ({
   posts,
   title,
   showTitle = true,
   showUsername = true,
-}) => {
-  // if (!posts.length) {
+  }) => {
   if (!posts) {
-    // console.log(`Posts: ${window}`)
     return <h3>No Posts Yet</h3>;
   }
 
   return (
-    <div>
-      {showTitle && <h3>{title}</h3>}
+    <div className='postListContain'>
       {posts &&
         posts.map((post) => (
-          <div key={post._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {showUsername ? (
-                <Link
-                  className="text-light"
-                  to={`/profile/${post.postAuthor}`}
-                >
-                  <span style={{ fontSize: '1rem' }}>
-                  {post.postAuthor} <br />
-                    made this post on {post.createdAt}
-                  </span>
-                </Link>
-              ) : (
-                <>
-                  <span style={{ fontSize: '1rem' }}>
-                    You made this post on {post.createdAt}
-                  </span>
-                </>
-              )}
-            </h4>
-            <div className="card-body bg-light p-2">
-              <p>{post.description}</p>
-            </div>
-            <Link to={`/posts/${post._id}`}>
-                <img src={post.image} />
-            </Link>
-          </div>
+          <PostCard showUsername={showUsername} post={post}/>
         ))}
     </div>
   );

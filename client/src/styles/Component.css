@@ -2,30 +2,39 @@
     display: flex;
     justify-content: space-between;
     font-family: "Protest Riot", sans-serif;
+    font-size: x-large;
+    padding: 10px 5%;
+    align-items: center;
+    border: 2px;
+    border-radius: 5px; 
     color: white;
+    background-color: #654321;
 }
 
 a {
     text-decoration: none;
     color: white;
-    
 }
 
 .navLogo {
     font-size: 30px;
 }
 
-.navUser, .navTitle {
- 
-
-.loginlink {
-    font-family: 'Protest Riot';
-    font-size: 25px;
+.loginLink {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+    padding: 15px 25px;
+    border: 2px;
+    border-radius: 5px; 
+    background-color: #654321;
 }
 
 .splashText {
     font-family: "Protest Riot", sans-serif;
     color: white;
+    position: relative;
 }
 
 .cloudinaryButton {
@@ -115,90 +124,7 @@ a {
     width: 55%;
     height: 10px;
     padding: 5px;
-
-}   font-size: 25px;
 }
-
-.loginlink {
-    font-family: 'Protest Riot';
-    font-size: 25px;
-}
-
-.splashText {
-    font-family: "Protest Riot", sans-serif;
-    color: white;
-}
-
-.cloudinaryButton {
-  background-color: #fbeee0;
-  border: 2px solid #422800;
-  border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.cloudinaryButton:hover {
-  background-color: #fff;
-}
-
-.cloudinaryButton:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-
-.cloudinaryWidget  h2 {
-    font-family: "Protest Riot", sans-serif;
-    color: white;
-}
-
-.descriptionForm label {
-    font-family: "Protest Riot", sans-serif;
-    font-size: 22px;
-    color: white;
-}
-
-.descriptionBox input {
-    width: 35%;
-    height: 100px;
-}
-
-.descriptionForm {
-    width: 100%;
-    padding-top: 20px;
-}
-
-.signUp label {
-    font-family: "Protest Riot", sans-serif;
-    font-size: 21px;
-    padding: 5px;
-    color: white;
-}
-
-.signUp h2 {
-    font-family: "Protest Riot", sans-serif;
-    font-size: 22px;
-    color: white;
-}
-
-.signUp input {
-    width: 55%;
-    height: 10px;
-    padding: 5px;
-
-}
-
 
 .footer {
     position: fixed;
@@ -208,4 +134,32 @@ a {
     text-align: center;
     color: white;
     font-weight: bold;
+}
+
+.postListContain {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0% 5%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 440px;
+    margin: 5% 0%;
+}
+
+.PostCard img {
+    max-width: 400px;
+    border: solid white;
+    border-width: 25px 20px;
+    min-height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.postContent {
+    background-color: white;
 }
