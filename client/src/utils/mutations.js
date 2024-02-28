@@ -33,19 +33,13 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost(
-    $description: String!
-    $image: String!
-  ) {
-    addPost(
-      description: $description
-      image: $image
-    ) {
+mutation addPost($description: String!, $image: String!) {
+  addPost(description: $description, image: $image) {
     _id
     description
     image
-    postAuthor
     createdAt
+    postAuthor
     comments {
       _id
       commentText
