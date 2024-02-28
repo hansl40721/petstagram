@@ -1,5 +1,5 @@
 // Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import CommentList from '../components/CommentList';
@@ -24,7 +24,9 @@ const SinglePost = () => {
   return (
     <div className="my-3">
       <h3 className="card-header bg-dark text-light p-2 m-0">
-        {post.postAuthor} <br />
+        <Link to={`/profile/${post.postAuthor}`}>
+          {post.postAuthor} <br />
+        </Link>
         <span style={{ fontSize: '1rem' }}>
           made this post on {post.createdAt}
         </span>
