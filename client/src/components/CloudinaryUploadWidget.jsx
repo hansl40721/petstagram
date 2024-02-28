@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 class CloudinaryUploadWidget extends Component {
   componentDidMount() {
@@ -9,7 +9,8 @@ class CloudinaryUploadWidget extends Component {
       },
       (error, result) => {
         if (!error && result && result.event === "success") {
-          console.log("Done! Here is the image info: ", result.info);
+          console.log("Done! Here is the image info: ", result.info)
+          const image = result.info.url;
         }
       }
     );

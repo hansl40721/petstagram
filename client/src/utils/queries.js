@@ -1,4 +1,3 @@
-
 import { gql }  from '@apollo/client';
 
 export const QUERY_USER = gql`
@@ -30,19 +29,19 @@ export const QUERY_POSTS = gql`
 `;
 
 export const QUERY_SINGLE_POST = gql`
-  query getSingleThought($thoughtId: ID!) {
+  query getSinglePost($postId: ID!) {
     post(postId: $postId) {
       _id
         description
         image
         postAuthor
         createdAt
-      # comments {
-      #   _id
-      #   commentText
-      #   commentAuthor
-      #   createdAt
-      # }
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
     }
   }
 `;
