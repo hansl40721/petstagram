@@ -23,14 +23,14 @@ const users = [
     },
     {
       username: 'user2',
-      password: 'password2',
+      password: '$2b$10$keWrOXiE1zCQ4GyxRD7wlumRjUp9mApFew2x70p03QMOMzjUzkFku',
       email: 'user2@example.com',
       posts: [
         {
           description: 'This is another post.',
-          image: 'https://example.com/image3.jpg',
+          image: 'https://images.squarespace-cdn.com/content/v1/5c6245b42727be14c54eceb9/1687228999288-UBXOSGMQAM1KHOKLP98O/Ultimate+guide+to+puppy+teething',
           postAuthor: 'user2',
-          createdAt: '',
+          createdAt: '2023-11-08T15:23:55.066+00:00',
         },
       ],
     },

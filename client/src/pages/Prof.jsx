@@ -11,8 +11,10 @@ const Prof = () => {
     variables: { username: userParam }
   });
   const user = data?.me || data?.user || {};
-  {console.log(Auth.getProfile().authenticatedPerson.username)}
-  {console.log(userParam)}
+  {console.log(`Auth: ${Auth.getProfile().authenticatedPerson.username}`)}
+  {console.log(`userParam: ${userParam}`)}
+  {console.log(`user: ${JSON.stringify(user)}`)}
+  {console.log(`data: ${JSON.stringify(data)}`)}
   if (
     Auth.loggedIn() && 
     /* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username, and compare it to the userParam variable */
@@ -58,7 +60,7 @@ const Prof = () => {
         <div className="col-12 col-md-10 mb-5">
           <PostList
             posts={user.posts}
-            title={`${user.username}'s posts...`}
+            title={`${user.username}'s posts`}
             showUsername={false}
           />
         </div>

@@ -46,13 +46,13 @@ const postSchema = new mongoose.Schema({
     ],
 });
 
-postSchema.virtual('id').get(function() {
-    return this._id.toHexString();
-});
+// postSchema.virtual('id').get(function() {
+//     return this._id.toHexString();
+// });
 
-postSchema.set('toJSON', {
-    virtuals: true
-});
+// postSchema.set('toJSON', {
+//     virtuals: true
+// });
 
 const Post = mongoose.model('Post', postSchema);
 

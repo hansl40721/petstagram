@@ -23,7 +23,9 @@ const PostList = ({
   posts,
   showUsername = true,
 }) => {
-  if (!posts.length) {
+  // if (!posts.length) {
+  if (!posts) {
+    // console.log(`Posts: ${window}`)
     return <h3>No Posts Yet</h3>;
   }
 
@@ -31,7 +33,7 @@ const PostList = ({
     <div>
       {posts &&
         posts.map((post) => (
-          <div key={post._id} className="card mb-3">
+          <div key={post?._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
@@ -54,13 +56,8 @@ const PostList = ({
             <div className="card-body bg-light p-2">
               <p>{post.description}</p>
             </div>
-            <div>
+            <Link to={`/posts/${post._id}`}>
                 <img src={post.image} />
-            </div>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/posts/${post._id}`}
-            >
             </Link>
           </div>
         ))}
