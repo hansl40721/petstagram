@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <Signup />
       }, {
 
-        path: '/profile',
+        path: '/profile/:username',
         element: <Prof />
       }, {
         path: '/post',

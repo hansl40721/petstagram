@@ -46,6 +46,9 @@ function addPost(props) {
               id="description"
               onChange={handleChange}
             />
+              <div>
+              <button className='cloudinaryButton' type="submit"> Post </button>
+              </div>
           </div>
         </form>
       </div>
