@@ -18,7 +18,7 @@ const Nav = () => {
             <i className="fa-solid fa-paw"></i> 
         </div>
         <Link to= '/profile'>
-        <div className="navUser">Username</div>
+        <div className="navUser">Profile</div>
         </Link>
     </div>
 
