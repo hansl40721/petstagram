@@ -44,7 +44,8 @@ export const ADD_POST = gql`
     _id
     description
     image
-    # createdAt
+    postAuthor
+    createdAt
     # comments {
     #   _id
     #   commentText
@@ -59,8 +60,8 @@ export const ADD_COMMENT = gql`
       _id
       description
       image
-      # postAuthor
-      # createdAt
+      postAuthor
+      createdAt
       # comments {
       #   _id
       #   commentText
