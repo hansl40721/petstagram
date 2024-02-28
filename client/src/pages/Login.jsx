@@ -43,7 +43,7 @@ function Login(props) {
       <div className="signUp">
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+        <div className="field flex-row space-between my-2">
         <label htmlFor="email">Email:</label>
           <input
             placeholder="email"
@@ -53,7 +53,7 @@ function Login(props) {
             onChange={handleChange}
           />
           </div>
-        <div className="flex-row space-between my-2">
+        <div className="field flex-row space-between my-2">
           <label htmlFor="password">Password:</label>
           <input 
             placeholder="********"

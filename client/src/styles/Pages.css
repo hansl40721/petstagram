@@ -10,6 +10,31 @@
     justify-content: center;
 }
 
+.signUp {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0%;
+}
+
+.signUp h2 {
+    font-size: 30px;
+}
+
+.field {
+    text-align: right;
+    margin: 2% 0%;
+}
+
+.field input {
+    border: solid white 1px;
+    padding: 3% 3%;
+    border-radius: 20px;
+}
+
+#subBtn {
+    margin: 10% 0%;
+}
+
 .homepageContain {
     max-width: 100%;
 }
