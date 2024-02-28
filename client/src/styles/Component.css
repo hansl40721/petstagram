@@ -209,3 +209,31 @@ a {
     color: white;
     font-weight: bold;
 }
+
+.postListContain {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0% 5%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 440px;
+    margin: 5% 0%;
+}
+
+.PostCard img {
+    max-width: 400px;
+    border: solid white;
+    border-width: 25px 20px;
+    min-height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.postContent {
+    background-color: white;
+}
