@@ -7,7 +7,8 @@
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
-    "seed": "node server/config/seeds.js"
+    "seed": "node server/config/seeds.js",
+    "install": "cd server && npm i && cd ../client && npm i"
   },
   "keywords": [],
   "author": "",
