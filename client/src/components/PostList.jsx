@@ -21,6 +21,8 @@ import { Link } from 'react-router-dom';
 
 const PostList = ({
   posts,
+  title,
+  showTitle = true,
   showUsername = true,
 }) => {
   // if (!posts.length) {
@@ -31,17 +33,18 @@ const PostList = ({
 
   return (
     <div>
+      {showTitle && <h3>{title}</h3>}
       {posts &&
         posts.map((post) => (
-          <div key={post?._id} className="card mb-3">
+          <div key={post._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${post.postAuthor}`}
+                  to={`/profile/${post.postAuthor}`}
                 >
-                  {post.postAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
+                  {post.postAuthor} <br />
                     made this post on {post.createdAt}
                   </span>
                 </Link>
