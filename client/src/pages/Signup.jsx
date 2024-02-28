@@ -45,7 +45,7 @@ function Signup(props) {
       <div className="logForm">
 
       <div className="signUp">
-      <h2>Signup</h2>
+        <h2>Sign Up</h2>
       <form onSubmit={handleFormSubmit}>
         
         <div className="flex-row space-between my-2">

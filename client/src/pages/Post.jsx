@@ -31,14 +31,16 @@ function addPost(props) {
     };
 
     return (
-      <>
-      <div className="postContainer container m-1">
+      <>      
+      <div className='cloudinaryWidget'>        
         <h2>Upload A Post</h2>
-        <form onSubmit={handleFormSubmit}>
-          <div className="flex-row space-between my-2">
-            <label htmlFor="description">Description</label>
+        <CloudinaryUploadWidget />
+      </div>
+      <div className="postContainer container m-1">
+        <form className ='descriptionForm' onSubmit={handleFormSubmit}>            
+        <label htmlFor="description">Description:</label>
+          <div className="descriptionBox flex-row space-between my-2">
             <input
-              placeholder="Description"
               name="description"
               type="description"
               id="description"
@@ -47,10 +49,7 @@ function addPost(props) {
           </div>
         </form>
       </div>
-      <div>
-        <h2>Cloudinary Widget</h2>
-        <CloudinaryUploadWidget />
-      </div>
+
       </>
     );
 
