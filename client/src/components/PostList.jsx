@@ -4,6 +4,8 @@ import "../styles/Component.css"
 
 const PostList = ({
   posts,
+  title,
+  showTitle = true,
   showUsername = true,
   }) => {
   if (!posts) {

@@ -10,7 +10,8 @@ class CloudinaryUploadWidget extends Component {
       (error, result) => {
         if (!error && result && result.event === "success") {
           console.log("Done! Here is the image info: ", result.info)
-          const image = result.info.url;
+          const image = result.info;
+          setImage(image.url);
         }
       }
     );
@@ -25,7 +26,7 @@ class CloudinaryUploadWidget extends Component {
 
   render() {
     return (
-      <button id="upload_widget" className="cloudinaryButton">
+      <button id="upload_widget" className="cloudinaryButton" type="submit">
         Upload
       </button>
     );

@@ -15,6 +15,8 @@ const Prof = () => {
   {console.log(`userParam: ${userParam}`)}
   {console.log(`user: ${JSON.stringify(user)}`)}
   {console.log(`data: ${JSON.stringify(data)}`)}
+  {console.log(`post: ${user.post}`)}
+  {console.log(`me: ${user.username}`)}
   if (
     Auth.loggedIn() && 
     /* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username, and compare it to the userParam variable */
@@ -61,7 +63,8 @@ const Prof = () => {
           <PostList
             posts={user.posts}
             title={`${user.username}'s posts`}
-            showUsername={false}
+            showTitle={false}
+            // showUsername={false}
           />
         </div>
         {!userParam && (
