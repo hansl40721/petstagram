@@ -36,10 +36,10 @@ function Signup(props) {
 
   return (
     <div className="logUpContain container my-1">
-      <div className="splashText">
+      {/* <div className="splashText">
         <h1>Welcome to Petstagram!</h1>
         <h2>The place to share your pet photos with other pet lovers</h2>
-      </div>
+      </div> */}
 
       <Link to="/login">← Go to Login</Link>
       <div className="logForm">
@@ -79,7 +79,7 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button id="subBtn" type="submit">Submit</button>
         </div>
       </form>
     </div>

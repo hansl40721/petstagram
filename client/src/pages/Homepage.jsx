@@ -12,14 +12,23 @@ import pic2 from "../assets/image-from-rawpixel-id-6669182-jpeg.png"
 const Homepage = () => {
     return (
     <div className="homepageContain">
-        <div className="splashText">
-            <h1>Welcome to Petstagram!</h1>
-            <h2>The place to share your pet photos with other pet lovers</h2>
+        <div className="splashContain">
+            <div className="splashText">
+                <h1>Welcome to Petstagram!</h1>
+                <h2>The place to share your pet photos with other pet lovers</h2>
+                <div className='loginlink'>
+                <Link to='/login'>
+                    Login
+                </Link>
+                </div>
+            </div>
+
+            <div className="splashImage">
+                <img id="splashPic1" src={pic1}/>
+                <img id="splashPic2" src={pic2}/>
+            </div>
         </div>
-        <div className="splashImage">
-            <img src={pic1}/>
-            <img src={pic2}/>
-        </div>
+
 
         <div className="footer">
             <p>Copyright Chinchilla Group 2024</p>
