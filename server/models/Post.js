@@ -1,18 +1,49 @@
 const mongoose = require('mongoose');
+const dayjs = require('dayjs');
 
 const postSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true
-    },
     description: {
         type: String,
-        required: true
+        trim: true,
+        required: true,
     },
     image: {    
-        type: String, 
-        required: false
-    }
+        data: Buffer, 
+        contentType: String,
+    },
+    postAuthor: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: function(dateTime){
+            return dayjs(dateTime).format("HH:mm:ss MM/DD/YYYY")
+        },
+    },
+    comments: [
+        {
+          commentText: {
+            type: String,
+            required: true,
+            minlength: 1,
+            maxlength: 280,
+          },
+          commentAuthor: {
+            type: String,
+            required: true,
+          },
+          createdAt: {
+            type: Date,
+            default: Date.now,
+            get: function(dateTime){
+                return dayjs(dateTime).format("HH:mm:ss MM/DD/YYYY")
+            },
+          },
+        },
+    ],
 });
 
 postSchema.virtual('id').get(function() {
