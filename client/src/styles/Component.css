@@ -187,11 +187,21 @@ a {
     flex-direction: column;
     background-color: white;
     max-width: 440px;
+    max-height: 600px;
     margin: 5% 0%;
 }
 
 .commentContain {
     margin: 5% 2%;
+    max-width: 320px;
+    min-height: 600px;
+}
+
+.commentContain h3 {
+    color: white;
+    font-family: "Protest Riot", sans-serif;
+    font-size: 30px;
+    margin: 0%
 }
 
 .commentCard {
@@ -200,6 +210,11 @@ a {
     width: 320px;
 }
 
+.commentCard img {
+    margin-bottom: 1%;
+    margin-left: 60%;
+    width: 8%;
+}
 
 .commentContent {
     background-color: white;
@@ -208,16 +223,57 @@ a {
     max-height: 100px;
     min-width: 300px;
     max-width: 300px;
-    margin-bottom: 5%;
 }
 
 .commentContent h5 {
     text-align: left;
     font-size: 15px;
     margin: 5% 5% 0% 5%;
+    padding-top: 1.5%;
 }
 
 .commentContent p {
     text-align: left;
     margin: 0% 0% 0% 10%;
+}
+
+.commentMaker {
+    background-color: #ecb890;
+    border-radius: 20px;
+    padding: 1%;
+    width: 300px;
+    margin-top: 2%;
+    height: 160px;
+}
+
+.commentMaker h4 {
+    margin: 2% 0%;
+    color: white;
+}
+
+.commentMaker p {
+    font-size: 10px;
+    margin: 0%;
+}
+
+.commentMaker textarea {
+    border: none;
+    resize: none;
+    border-radius: 5px;
+    padding: 5% 5%;
+    width: 70%;
+}
+
+.tail {
+    width: 8%;
+    margin-left: 80%;
+    transform: translateY(-13px) translateX(18px);
+}
+
+.commentMaker button {
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 3%;
+    padding: 1% 2%;
 }

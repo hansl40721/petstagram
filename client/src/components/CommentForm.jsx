@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import thoughtTail from "../assets/thought-tail(1).png"
 
 const CommentForm = ({ postId }) => {
   const [commentText, setCommentText] = useState('');
@@ -42,18 +43,11 @@ const CommentForm = ({ postId }) => {
 
   return (
     <div>
+      <div className='commentMaker'>
       <h4>What are your thoughts on this post?</h4>
 
       {Auth.loggedIn() ? (
         <>
-          <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
-            Character Count: {characterCount}/280
-            {error && <span className="ml-2">{error.message}</span>}
-          </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
@@ -64,10 +58,17 @@ const CommentForm = ({ postId }) => {
                 placeholder="Add your comment..."
                 value={commentText}
                 className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
             </div>
+          <p
+            className={`m-0 ${
+              characterCount === 280 || error ? 'text-danger' : ''
+            }`}
+          >
+            Character Count: {characterCount}/280
+            {error && <span className="ml-2">{error.message}</span>}
+          </p>
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
@@ -82,6 +83,8 @@ const CommentForm = ({ postId }) => {
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
+      </div>
+      <img className="tail" src={thoughtTail}/>
     </div>
   );
 };

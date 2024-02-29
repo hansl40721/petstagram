@@ -1,3 +1,5 @@
+import bubbleTail from "../assets/bubble-tail.png"
+
 const CommentList = ({ comments = [] }) => {
   if (!comments.length) {
     return <h3>No Comments Yet</h3>;
@@ -19,6 +21,7 @@ const CommentList = ({ comments = [] }) => {
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
               </div>
+              <img src={bubbleTail}/>
             </div>
           ))}
       </div>
