@@ -26,7 +26,7 @@ const Nav = () => {
           {Auth.loggedIn() ? (
             <div className="navBtns">
               <Link className="addPostBtn" to="/post">
-                <i class="fa-regular fa-square-plus"></i>
+                <i className="fa-regular fa-square-plus"></i>
               </Link>
               <Link className="profileBtn btn btn-lg btn-info m-2" to="/me">
                 {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}

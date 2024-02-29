@@ -62,7 +62,6 @@ const Prof = () => {
         <div className="col-12 col-md-10 mb-5">
           <PostList
             posts={user.posts}
-            title={`${user.username}'s posts`}
             showUsername={Auth.getProfile().authenticatedPerson.username === user.username}
           />
         </div>
