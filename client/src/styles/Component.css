@@ -157,11 +157,13 @@ a {
     display: flex;
     flex-direction: column;
     background-color: white;
+    min-width: 440px;
     max-width: 440px;
     margin: 5% 0%;
 }
 
 .PostCard img {
+    min-width: 400px;
     max-width: 400px;
     border: solid white;
     border-width: 25px 20px;
