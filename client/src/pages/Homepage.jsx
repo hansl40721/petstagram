@@ -1,15 +1,41 @@
-import { useState } from "react";
-import { useMutation } from '@apollo/client';
+// import { useState } from "react";
+// import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import { ADD_USER } from "../utils/mutations";
+// import { LOGIN } from '../utils/mutations';
+// import { ADD_USER } from "../utils/mutations";
+import { QUERY_POSTS } from '../utils/queries';
+import Feed from '../components/Feed';
 import Auth from '../utils/auth';
 import "../styles/Pages.css"
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 import pic1 from "../assets/image-from-rawpixel-id-6657881-jpeg(1).png"
 import pic2 from "../assets/image-from-rawpixel-id-6669182-jpeg.png"
+import { useQuery } from '@apollo/client';
 
 const Homepage = () => {
+    const { loading, data } = useQuery(QUERY_POSTS)
+    const posts = data?.posts || [];
+    if (Auth.loggedIn() === true) {
+        return (
+            <div className="homepageContain">
+    <div>
+      <div className="flex-row justify-center mb-3">
+        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
+          Check out some of our creators' content!
+        </h2>
+
+        <div className="col-12 col-md-10 mb-5">
+          <Feed
+            posts={posts}
+            title={`${posts.postAuthor}'s posts`}
+          />
+        </div>
+      </div>
+    </div>
+
+            </div>
+        )
+    }
     return (
     <div className="homepageContain">
         <div className="splashContain">

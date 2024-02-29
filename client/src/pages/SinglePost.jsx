@@ -1,10 +1,10 @@
 // Import the `useParams()` hook
 import { useParams, Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
-
+import { REMOVE_COMMENT } from '../utils/mutations';
 import { QUERY_SINGLE_POST } from '../utils/queries';
 import Auth from '../utils/auth';
 import "../styles/Component.css"
@@ -18,11 +18,28 @@ const SinglePost = () => {
     variables: { postId: postId },
   });
 
+  const [removeComment] = useMutation(
+    REMOVE_COMMENT, {
+      refetchQueries: [
+        QUERY_SINGLE_POST,
+        'getSinglePost'
+      ]
+    });
+
+  const handleRemoveComment = async (data) => {
+    console.log(post);
+    try {
+      const { data } = await removeComment({
+        variables: {
+          postId,
+          commentId: post.comments.this.commentId },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
   const post = data?.post || {};
-  console.log(`post: ${JSON.stringify(post)}`)
-  console.log(`postAuthor: ${post.postAuthor}`)
-  console.log(`data: ${JSON.stringify(data?.post)}`)
-  console.log(`Auth: ${Auth.getProfile().authenticatedPerson.username}`)
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -59,7 +76,7 @@ const SinglePost = () => {
 
       <div className='commentContain'>
         <div className="my-5">
-          <CommentList comments={post.comments} />
+          <CommentList comments={post.comments} handleRemoveComment={handleRemoveComment()}/>
         </div>
         <div className="m-3 p-4">
           <CommentForm postId={post._id} />

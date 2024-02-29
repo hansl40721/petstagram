@@ -64,3 +64,29 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($postId: ID!, $commentId: ID!) {
+    removeComment(postId: $postId, commentId: $commentId) {
+      _id
+      comments {
+        _id
+        commentText
+        commentAuthor
+      }
+    }
+  }
+`;
+
+// export const REMOVE_COMMENT = gql`
+//   mutation removeComment($postId: ID!, $commentId: ID!) {
+//     removeComment(commentText: $commentText) {
+//       _id
+//       comments {
+//         _id
+//         commentText
+//         commentAuthor
+//       }
+//     }
+//   }
+// `;
