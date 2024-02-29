@@ -14,7 +14,7 @@ const PostCard = ({showUsername, post}) => {
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${post.postAuthor}`}
+                  to={`/profile/${post.postAuthor}`}
                 >
                   {post.postAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
