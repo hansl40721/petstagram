@@ -190,6 +190,11 @@ a {
 
 .singlePostContent {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 130px;
+    justify-content: space-between;
+
 }
 
 .singleCard {
@@ -199,6 +204,29 @@ a {
     max-width: 440px;
     max-height: 600px;
     margin: 5% 0%;
+}
+
+.singlePostContent h3 a {
+    color: black;
+}
+
+.singlePostContent h3 {
+    text-align: left;
+    margin: 0%;
+    margin-left: 5%
+}
+
+.singlePostCap {
+    min-height: 70px;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.timeStamp {
+    text-align: left;
+    margin-left: 5%;
+    font-size: 15px;
+    color: gray;
 }
 
 .commentContain {
