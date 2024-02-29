@@ -22,7 +22,7 @@ const Homepage = () => {
                 </Link>
                 </div>
                 ) : (<div className='loginLink'>
-                <Link to='/profile'>
+                <Link to='/me'>
                         Go To Profile
                 </Link>
                 </div>)
