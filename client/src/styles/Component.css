@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
     padding: 10px 5%;
@@ -9,6 +9,12 @@
     border-radius: 5px; 
     color: white;
     background-color: #654321;
+}
+
+.navTitle,
+.navLogo,
+.navBtns {
+    min-width: 30%;
 }
 
 a {
@@ -28,6 +34,7 @@ a {
 
 .navLogo {
     font-size: 30px;
+    text-align: center;
 }
 
 .loginLink {
@@ -39,6 +46,14 @@ a {
     border: 2px;
     border-radius: 5px; 
     background-color: #654321;
+}
+
+.navBtns {
+    display: flex;
+}
+
+.addPostBtn {
+    margin-right: 10%;
 }
 
 .splashText {
