@@ -173,3 +173,61 @@ a {
 .postContent {
     background-color: white;
 }
+
+.singlePostCard {
+    display: flex;
+    justify-content: center;
+}
+
+.singleCard img {
+    max-width: 400px;
+    border: solid white;
+    border-width: 25px 20px;
+    min-height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.singlePostContent {
+    background-color: white;
+}
+
+.singleCard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 440px;
+    margin: 5% 0%;
+}
+
+.commentContain {
+    margin: 5% 2%;
+}
+
+.commentCard {
+    overflow: auto;
+    max-height: 375px;
+    width: 320px;
+}
+
+
+.commentContent {
+    background-color: white;
+    border-radius: 20px;
+    min-height: 80px;
+    max-height: 100px;
+    min-width: 300px;
+    max-width: 300px;
+    margin-bottom: 5%;
+}
+
+.commentContent h5 {
+    text-align: left;
+    font-size: 15px;
+    margin: 5% 5% 0% 5%;
+}
+
+.commentContent p {
+    text-align: left;
+    margin: 0% 0% 0% 10%;
+}
