@@ -2,9 +2,10 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const PostCard = ({showUsername, post}) => {
+  console.log(`Post: ${JSON.stringify(post)}`);
     return (
     <div className="PostCard">
-        <div key={post?._id} className="card mb-3">
+        <div key={post._id} className="card mb-3">
             <Link to={`/posts/${post._id}`}>
                 <img src={post.image} />
             </Link>
