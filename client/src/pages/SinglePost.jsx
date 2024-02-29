@@ -31,17 +31,18 @@ const SinglePost = () => {
         </div>
 
         <div className='singlePostContent'>
-          <h3 className="card-header bg-dark text-light p-2 m-0">
+          <h3 className="card-header bg-dark text-light">
             <Link to={`/profile/${post.postAuthor}`}>
               {post.postAuthor} <br />
             </Link>
-            <span style={{ fontSize: '1rem' }}>
-              made this post on {post.createdAt}
-            </span>
           </h3>
 
-          <div className="bg-light py-4">
+          <div className="singlePostCap bg-light py-4">
               {post.description}
+          </div>
+
+          <div className='timeStamp'>
+            Posted at: {post.createdAt}
           </div>
         </div>
       </div>
