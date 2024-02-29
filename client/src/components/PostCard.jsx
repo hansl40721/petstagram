@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const PostCard = ({showUsername, post}) => {
-  console.log(`Post: ${JSON.stringify(post)}`);
     return (
     <div className="PostCard">
         <div key={post._id} className="card mb-3">
@@ -30,7 +29,7 @@ const PostCard = ({showUsername, post}) => {
               <p>{post.description}</p>
             </div>
             </div>
-        </div>    
+        </div>
     </div>
     );
 }
