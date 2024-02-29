@@ -26,17 +26,17 @@ const SinglePost = () => {
       ]
     });
 
-  const handleRemoveComment = async (data) => {
-    console.log(post);
+  const handleRemoveComment = async (event) => {
+    if (confirm("Are you sure you want to delete this comment?")) {
     try {
       const { data } = await removeComment({
         variables: {
           postId,
-          commentId: post.comments.this.commentId },
+          commentId: event._id },
       });
     } catch (err) {
       console.log(err);
-    }
+    }}
   };
   
   const post = data?.post || {};
@@ -82,7 +82,10 @@ const SinglePost = () => {
 
       <div className='commentContain'>
         <div className="my-5">
-          <CommentList comments={post.comments} handleRemoveComment={handleRemoveComment()}/>
+          <CommentList
+          comments={post.comments}
+          handleRemoveComment={handleRemoveComment}
+          />
         </div>
         <div className="m-3 p-4">
           <CommentForm postId={post._id} />

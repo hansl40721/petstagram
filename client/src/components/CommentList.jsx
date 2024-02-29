@@ -4,7 +4,10 @@ import { QUERY_SINGLE_POST } from '../utils/queries';
 import bubbleTail from "../assets/bubble-tail.png"
 import Auth from "../utils/auth"
 
-const CommentList = ({ comments = [] }) => {
+const CommentList = ({
+  comments = [],
+  handleRemoveComment,
+}) => {
 //   const [removeComment, { error }] = useMutation(
 //     REMOVE_COMMENT, 
 //     {
@@ -47,7 +50,7 @@ const CommentList = ({ comments = [] }) => {
                   {comment.commentAuthor} commented on {comment.createdAt}:
                 </h5>
                 <p className="card-body">{comment.commentText}</p>
-                <button onClick={() => {this.props.handleRemoveComment(comment)}} style={{display: comment.commentAuthor === Auth.getProfile().authenticatedPerson.username? "show": "none"}} className="fas fa-trash-alt text-danger delete-comment" />
+                <button onClick={() => {handleRemoveComment(comment)}} style={{display: comment.commentAuthor === Auth.getProfile().authenticatedPerson.username? "show": "none"}} className="fas fa-trash-alt text-danger delete-comment" />
               </div>
               <img src={bubbleTail}/>
             </div>
