@@ -71,9 +71,8 @@ const PostForm = () => {
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
+            className={`m-0 ${characterCount === 280 || error ? 'text-danger' : ''
+              }`}
           >
             Character Count: {characterCount}/280
           </p>
@@ -92,11 +91,11 @@ const PostForm = () => {
               ></textarea>
             </div>
 
-            <div className='cloudinaryWidget'>        
-        <h2>Upload A Post</h2>
-        <CloudinaryUploadWidget />
-        <br></br>
-        <textarea
+            <div className='cloudinaryWidget'>
+              <h2>Upload A Post</h2>
+              <CloudinaryUploadWidget onImageUpload={setImage} onImageUploadSuccess={handleFormSubmit}/>
+              <br></br>
+              <textarea
                 name="image"
                 placeholder="Enter image url here"
                 value={image}
@@ -104,7 +103,7 @@ const PostForm = () => {
                 style={{ lineHeight: '1', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
-      </div>
+            </div>
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
                 Add Post

@@ -6,7 +6,7 @@ import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_POST } from '../utils/queries';
-
+import Auth from '../utils/auth';
 import "../styles/Component.css"
 
 const SinglePost = () => {
@@ -19,22 +19,38 @@ const SinglePost = () => {
   });
 
   const post = data?.post || {};
-
+  console.log(`post: ${JSON.stringify(post)}`)
+  console.log(`postAuthor: ${post.postAuthor}`)
+  console.log(`data: ${JSON.stringify(data?.post)}`)
+  console.log(`Auth: ${Auth.getProfile().authenticatedPerson.username}`)
   if (loading) {
     return <div>Loading...</div>;
   }
   return (
     <div className="singlePostCard my-3">
       <div className='singleCard'>
-        <div>
+      <Link to={`/profile/${post.postAuthor}`}>
           <img src={post.image} />
-        </div>
-
+        </Link>
         <div className='singlePostContent'>
-          <h3 className="card-header bg-dark text-light">
-            <Link to={`/profile/${post.postAuthor}`}>
-              {post.postAuthor} <br />
-            </Link>
+
+          <h3 className="card-header bg-dark text-light p-2 m-0">
+          {(Auth.getProfile().authenticatedPerson.username == post.postAuthor) ? (
+                <>
+                <span style={{ fontSize: '1rem' }}>
+                  You made this post on {post.createdAt}
+                </span>
+              </>
+              ) : (
+                <>
+                {post.postAuthor} <br />
+                <span style={{ fontSize: '1rem' }}>
+                  made this post on {post.createdAt}
+                  {/* {post.postAuthor} made this post on {post.createdAt} */}
+                </span>
+              </>                
+              )}
+
           </h3>
 
           <div className="singlePostCap bg-light py-4">

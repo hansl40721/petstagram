@@ -16,6 +16,16 @@ a {
     color: white;
 }
 
+#logoutButton {
+    font-family: "Protest Riot", sans-serif;
+    font-size: x-large;
+    color: #654321;
+    padding: 4px 18px;
+    border: 2px;
+    border-radius: 5px; 
+    background-color: white;
+}
+
 .navLogo {
     font-size: 30px;
 }
