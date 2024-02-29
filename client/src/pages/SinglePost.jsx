@@ -26,15 +26,15 @@ const SinglePost = () => {
   return (
     <div className="singlePostCard my-3">
       <div className='singleCard'>
-        <div>
+      <Link to={`/profile/${post.postAuthor}`}>
           <img src={post.image} />
-        </div>
+        </Link>
 
         <div className='singlePostContent'>
           <h3 className="card-header bg-dark text-light p-2 m-0">
-            <Link to={`/profile/${post.postAuthor}`}>
+            <div>
               {post.postAuthor} <br />
-            </Link>
+            </div>
             <span style={{ fontSize: '1rem' }}>
               made this post on {post.createdAt}
             </span>

@@ -4,9 +4,7 @@ import "../styles/Component.css"
 
 const PostList = ({
   posts,
-  title,
-  showTitle = true,
-  showUsername = true,
+  showUsername,
   }) => {
   if (!posts.length) {
     return <h3>No Posts Yet</h3>;

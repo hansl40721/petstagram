@@ -64,7 +64,7 @@ const Prof = () => {
             posts={user.posts}
             title={`${user.username}'s posts`}
             showTitle={false}
-            // showUsername={false}
+            showUsername={Auth.getProfile().authenticatedPerson.username !== user.username}
           />
         </div>
         {!userParam && (
