@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
     padding: 10px 5%;
@@ -14,7 +14,7 @@
 .navTitle,
 .navLogo,
 .navBtns {
-    min-width: 30%;
+    min-width: 32%;
 }
 
 a {
@@ -53,6 +53,10 @@ a {
 }
 
 .addPostBtn {
+    margin-right: 20%;
+}
+
+.profileBtn {
     margin-right: 10%;
 }
 
@@ -259,9 +263,14 @@ a {
     margin: 0%
 }
 
+.noComText {
+    min-height: 420px;
+}
+
 .commentCard {
     overflow: auto;
     max-height: 375px;
+    min-height: 375px;
     width: 320px;
 }
 
