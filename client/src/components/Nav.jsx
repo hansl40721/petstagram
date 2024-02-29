@@ -24,16 +24,18 @@ const Nav = () => {
         </div>
         <div>
           {Auth.loggedIn() ? (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
+            <div className="navBtns">
+              <Link className="addPostBtn" to="/post">
+                <i class="fa-regular fa-square-plus"></i>
+              </Link>
+              <Link className="profileBtn btn btn-lg btn-info m-2" to="/me">
                 {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
                 {Auth.getProfile().authenticatedPerson.username}
-                <br />
               </Link>
-              <button id="logoutButton" className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button id="logoutButton" className="logoutBtn btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
-            </>
+            </div>
           ) : (
             <>
               <Link className="btn btn-lg btn-info m-2" to="/signup">

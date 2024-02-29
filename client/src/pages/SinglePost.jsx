@@ -50,6 +50,7 @@ const SinglePost = () => {
           <img src={post.image} />
         </Link>
         <div className='singlePostContent'>
+
           <h3 className="card-header bg-dark text-light p-2 m-0">
           {(Auth.getProfile().authenticatedPerson.username == post.postAuthor) ? (
                 <>
@@ -66,10 +67,15 @@ const SinglePost = () => {
                 </span>
               </>                
               )}
+
           </h3>
 
-          <div className="bg-light py-4">
+          <div className="singlePostCap bg-light py-4">
               {post.description}
+          </div>
+
+          <div className='timeStamp'>
+            Posted at: {post.createdAt}
           </div>
         </div>
       </div>

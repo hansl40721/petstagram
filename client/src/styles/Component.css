@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
     padding: 10px 5%;
@@ -9,6 +9,12 @@
     border-radius: 5px; 
     color: white;
     background-color: #654321;
+}
+
+.navTitle,
+.navLogo,
+.navBtns {
+    min-width: 30%;
 }
 
 a {
@@ -28,6 +34,7 @@ a {
 
 .navLogo {
     font-size: 30px;
+    text-align: center;
 }
 
 .loginLink {
@@ -39,6 +46,14 @@ a {
     border: 2px;
     border-radius: 5px; 
     background-color: #654321;
+}
+
+.navBtns {
+    display: flex;
+}
+
+.addPostBtn {
+    margin-right: 10%;
 }
 
 .splashText {
@@ -157,11 +172,13 @@ a {
     display: flex;
     flex-direction: column;
     background-color: white;
+    min-width: 440px;
     max-width: 440px;
     margin: 5% 0%;
 }
 
 .PostCard img {
+    min-width: 400px;
     max-width: 400px;
     border: solid white;
     border-width: 25px 20px;
@@ -190,6 +207,11 @@ a {
 
 .singlePostContent {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 130px;
+    justify-content: space-between;
+
 }
 
 .singleCard {
@@ -199,6 +221,29 @@ a {
     max-width: 440px;
     max-height: 600px;
     margin: 5% 0%;
+}
+
+.singlePostContent h3 a {
+    color: black;
+}
+
+.singlePostContent h3 {
+    text-align: left;
+    margin: 0%;
+    margin-left: 5%
+}
+
+.singlePostCap {
+    min-height: 70px;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.timeStamp {
+    text-align: left;
+    margin-left: 5%;
+    font-size: 15px;
+    color: gray;
 }
 
 .commentContain {
