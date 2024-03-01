@@ -86,3 +86,31 @@
 .exploreHead {
     color: white;
 }
+
+.postFormContain {
+    border-top: solid white 2px
+}
+
+.postFormContain h2 {
+    color: white;
+    font-family: "Protest Riot";
+}
+
+.postFormContain textarea {
+    resize: none;
+    width: 20%;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+
+}
+
+.postFormContain p {
+    font-size: 15px;
+    margin: 0%;
+    margin-bottom: 1%;
+}
+
+.postFormContain button {
+    margin-bottom: 1%;
+}
