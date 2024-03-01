@@ -198,6 +198,7 @@ a {
 .singlePostCard {
     display: flex;
     justify-content: center;
+    min-height: 600px;
 }
 
 .singleCard img {

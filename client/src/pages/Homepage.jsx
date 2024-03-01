@@ -20,8 +20,8 @@ const Homepage = () => {
             <div className="homepageContain">
     <div>
       <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Check out some of our creators' content!
+        <h2 className="exploreHead col-12 col-md-10 bg-dark text-light p-3 mb-5">
+          Explore more Pets!
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
