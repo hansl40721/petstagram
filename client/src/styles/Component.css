@@ -8,6 +8,7 @@
     border: 2px;
     border-radius: 5px; 
     color: white;
+    background-color: #ecb890;
 }
 
 .navTitle,
@@ -24,7 +25,7 @@ a {
 #logoutButton {
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
-    color: #654321;
+    color: #ecb890;
     padding: 4px 18px;
     border: 2px;
     border-radius: 5px; 
