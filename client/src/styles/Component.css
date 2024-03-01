@@ -1,6 +1,6 @@
 .nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
     padding: 10px 5%;
@@ -8,13 +8,13 @@
     border: 2px;
     border-radius: 5px; 
     color: white;
-    background-color: #654321;
+    background-color: #ecb890;
 }
 
 .navTitle,
 .navLogo,
 .navBtns {
-    min-width: 30%;
+    min-width: 32%;
 }
 
 a {
@@ -25,7 +25,7 @@ a {
 #logoutButton {
     font-family: "Protest Riot", sans-serif;
     font-size: x-large;
-    color: #654321;
+    color: #ecb890;
     padding: 4px 18px;
     border: 2px;
     border-radius: 5px; 
@@ -45,7 +45,7 @@ a {
     padding: 15px 25px;
     border: 2px;
     border-radius: 5px; 
-    background-color: #654321;
+    background-color: #ecb890;
 }
 
 .navBtns {
@@ -53,6 +53,10 @@ a {
 }
 
 .addPostBtn {
+    margin-right: 20%;
+}
+
+.profileBtn {
     margin-right: 10%;
 }
 
@@ -98,14 +102,14 @@ a {
 
 
 #subBtn {
-    background-color: #fbeee0;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
+    background-color: #ecb890;
+    border: none;
+    border-radius: 10px;
+    color: white;
     cursor: pointer;
     display: inline-block;
     font-weight: 600;
+    font-family: "Protest Riot";
     font-size: 18px;
     padding: 0 18px;
     line-height: 50px;
@@ -194,6 +198,7 @@ a {
 .singlePostCard {
     display: flex;
     justify-content: center;
+    min-height: 600px;
 }
 
 .singleCard img {
@@ -259,9 +264,14 @@ a {
     margin: 0%
 }
 
+.noComText {
+    min-height: 420px;
+}
+
 .commentCard {
     overflow: auto;
     max-height: 375px;
+    min-height: 375px;
     width: 320px;
 }
 

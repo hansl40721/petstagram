@@ -32,7 +32,7 @@ const CommentList = ({
 //   };
 
   if (!comments.length) {
-    return <h3>No Comments Yet</h3>;
+    return <h3 className='noComText'>No Comments Yet</h3>;
   }
 
   return (

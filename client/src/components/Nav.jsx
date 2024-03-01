@@ -38,8 +38,8 @@ const Nav = () => {
             </div>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/signup">
-                Signup
+              <Link className="navBtns logBtn btn btn-lg btn-info m-2" to="/login">
+                Login
               </Link>
             </>
           )}

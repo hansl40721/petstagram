@@ -51,20 +51,16 @@ const SinglePost = () => {
         </Link>
         <div className='singlePostContent'>
 
-          <h3 className="card-header bg-dark text-light p-2 m-0">
+          <h3 className="card-header bg-primary text-light p-2 m-0">
           {(Auth.getProfile().authenticatedPerson.username == post.postAuthor) ? (
                 <>
                 <span style={{ fontSize: '1rem' }}>
-                  You made this post on {post.createdAt}
+                  {post.postAuthor} (you):
                 </span>
               </>
               ) : (
                 <>
-                {post.postAuthor} <br />
-                <span style={{ fontSize: '1rem' }}>
-                  made this post on {post.createdAt}
-                  {/* {post.postAuthor} made this post on {post.createdAt} */}
-                </span>
+                {post.postAuthor}:
               </>                
               )}
 

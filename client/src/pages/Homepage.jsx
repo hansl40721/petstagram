@@ -20,8 +20,8 @@ const Homepage = () => {
             <div className="homepageContain">
     <div>
       <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Check out some of our creators' content!
+        <h2 className="exploreHead col-12 col-md-10 bg-dark text-light p-3 mb-5">
+          Explore more Pets!
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
@@ -43,8 +43,8 @@ const Homepage = () => {
                 <h1>Welcome to Petstagram!</h1>
                 <h2>The place to share your pet photos with other pet lovers</h2>
                 { !Auth.loggedIn() ? ( <div className='loginLink'>
-                <Link to='/login'>
-                        Login
+                <Link to='/signup'>
+                        Sign Up
                 </Link>
                 </div>
                 ) : (<div className='loginLink'>
