@@ -43,8 +43,8 @@ const Homepage = () => {
                 <h1>Welcome to Petstagram!</h1>
                 <h2>The place to share your pet photos with other pet lovers</h2>
                 { !Auth.loggedIn() ? ( <div className='loginLink'>
-                <Link to='/login'>
-                        Login
+                <Link to='/signup'>
+                        Sign Up
                 </Link>
                 </div>
                 ) : (<div className='loginLink'>
