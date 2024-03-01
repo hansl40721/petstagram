@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "../styles/Pages.css"
 
 class CloudinaryUploadWidget extends Component {
   componentDidMount() {
@@ -26,7 +27,7 @@ class CloudinaryUploadWidget extends Component {
 
   render() {
     return (
-      <button id="upload_widget" className="cloudinaryButton" type="submit">
+      <button id="upload_widget" className="subBtn" type="submit">
         Upload
       </button>
     );

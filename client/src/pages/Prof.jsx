@@ -4,6 +4,7 @@ import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
+import "../styles/Pages.css"
 
 const Prof = () => {
   const { username: userParam } = useParams();
@@ -67,8 +68,7 @@ const Prof = () => {
         </div>
         {!userParam && (
           <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
+            className="postFormContain col-12 col-md-10 mb-3 p-3"
           >
             <PostForm />
           </div>
