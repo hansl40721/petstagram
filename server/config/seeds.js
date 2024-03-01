@@ -197,14 +197,6 @@ const posts = [
     ],
   },
   {
-    _id: "65e115d92b8c9e63df335876",
-    description: "Here's Lord Dunkirk when he was just a wee lad! Not so cool, but rather cute.",
-    image: "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fe08z7vzfdlz71.jpg",
-    postAuthor: "TheRealJOE",
-    createdAt: "2024-02-29T23:40:09.013Z",
-    comments: [],
-  },
-  {
     _id: "65e118eb2b8c9e63df335891",
     description: "This is Rigby. He's an award-winning agility dog.",
     image: "https://cdn.britannica.com/26/234626-050-7289C87B/Border-collie-dog-jumping-hurdle-agility.jpg",
